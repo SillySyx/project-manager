@@ -1,0 +1,6 @@
+﻿{
+    "NewActivity": "{New} {Activity}[tolower]",
+    "TimeUsed": "Spent",
+    "DeleteProject": "{Delete} {Project}[tolower]",
+    "DeleteProjectText": "If you delete this project all activities and times will be deleted\r\n\r\nAre you sure you want to delete this project?"
+}

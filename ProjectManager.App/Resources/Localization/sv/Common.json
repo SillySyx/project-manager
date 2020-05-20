@@ -1,0 +1,24 @@
+﻿{
+    "New": "Ny",
+    "New2": "Nytt",
+    "Save": "Spara",
+    "Open": "Öppna",
+    "Delete": "Ta bort",
+    "Edit": "Ändra",
+    "GoBack": "Tillbaka",
+    "Parent": "Parent",
+
+    "Name": "Namn",
+    "TimeBudget": "Tidsbudget",
+    "Deadline": "Deadline",
+
+    "Project": "Projekt",
+    "Activity": "Aktivitet",
+    "Time": "Tid",
+    "ReportTime": "Rapportera tid",
+
+    "NewProject": "{New2} {Project}[tolower]",
+    "TimeReport": "Tidsrapport",
+
+    "Comment": "Kommentar"
+}

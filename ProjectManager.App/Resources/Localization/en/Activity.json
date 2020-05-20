@@ -1,0 +1,8 @@
+﻿{
+    "Used": "Spent",
+    "Total": "Total",
+    "Date": "Date",
+    "Hours": "Hours",
+    "DeleteActivity":  "{Delete} {Activity}[tolower]",
+    "DeleteActivityText":  "If you delete this activity all registered times will also be deleted.\r\n\r\nAre you sure you want to delete the activity?"
+}

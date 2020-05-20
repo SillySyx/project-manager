@@ -1,0 +1,4 @@
+﻿{
+    "Title":  "{New} {Activity}[tolower]",
+    "Description": "Here you can add a new activity for the selected project, specify {TimeBudget}[tolower] and {Deadline}[tolower] if it is needed."
+}

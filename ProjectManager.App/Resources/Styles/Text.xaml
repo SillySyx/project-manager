@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Style TargetType="{x:Type Window}">
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Foreground" Value="{StaticResource TextColor}" />
+    </Style>
+
+    <Style x:Key="HideIfEmpty" TargetType="TextBlock">
+        <Style.Triggers>
+            <Trigger Property="Text" Value="{x:Null}">
+                <Setter Property="Visibility" Value="Collapsed" />
+            </Trigger>
+            <Trigger Property="Text" Value="">
+                <Setter Property="Visibility" Value="Collapsed" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="TitleTextBlock" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource MainColor}" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+
+    <Style x:Key="SubTitleTextBlock" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource DarkColor}" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+    
+</ResourceDictionary>

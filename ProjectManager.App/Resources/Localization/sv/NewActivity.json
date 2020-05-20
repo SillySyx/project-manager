@@ -1,0 +1,4 @@
+﻿{
+    "Title":  "{New} {Activity}[tolower]",
+    "Description": "Här lägger du till en ny aktivitet för det valda projektet, ange {TimeBudget}[tolower] och {Deadline}[tolower] om det är aktuellt."
+}

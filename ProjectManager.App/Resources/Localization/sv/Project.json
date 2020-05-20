@@ -1,0 +1,6 @@
+﻿{
+    "NewActivity": "{New} {Activity}[tolower]",
+    "TimeUsed": "Förbrukat",
+    "DeleteProject": "{Delete} {Project}[tolower]",
+    "DeleteProjectText": "Om du tar bort det här projektet så kommer alla aktiviteter och rapporterade tider att tas bort.\r\n\r\nÄr du säker på att du vill ta bort det här projektet?"
+}

@@ -1,0 +1,4 @@
+﻿{
+    "Title":  "{Edit} {Project}[tolower]",
+    "Description": "Här kan du ändra namnet på projektet och om det ska ingå i ett annat {Project}[tolower] genom att välja en {Parent}[tolower]."
+}

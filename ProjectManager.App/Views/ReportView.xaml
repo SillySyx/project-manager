@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="ProjectManager.Views.ReportView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+    </UserControl.Resources>
+    
+    <Grid Margin="20 10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <TextBlock Text="Tidsrapport" Style="{StaticResource TitleTextBlock}" />
+
+            <Grid Margin="5 10 5 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="1" Text="Aktivitet" />
+                <TextBlock Grid.Column="2" Text="Timmar" />
+                <TextBlock Grid.Column="3" Text="Kommentar" />
+            </Grid>
+            <Separator Margin="0 5 0 10" Style="{StaticResource StyledSeparator}" />
+        </StackPanel>
+        <DatePicker SelectedDate="{Binding SelectedDate}" HorizontalAlignment="Right" IsTodayHighlighted="True" BorderThickness="0" />
+
+        <ItemsControl ItemsSource="{Binding Times}" Grid.Row="1">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0 0 0 20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="{Binding ProjectFullName}" Style="{StaticResource SubTitleTextBlock}" />
+
+                        <ListBox Grid.Row="1" ItemsSource="{Binding ActivityTimes}" BorderBrush="{x:Null}" Background="Transparent" HorizontalContentAlignment="Stretch">
+                            <ListBox.Style>
+                                <Style TargetType="ListBox">
+                                    <Setter Property="ListBoxItem.Foreground" Value="{StaticResource TextColor}" />
+                                    <Setter Property="ItemContainerStyle">
+                                        <Setter.Value>
+                                            <Style TargetType="ListBoxItem">
+                                                <Setter Property="ContentTemplate">
+                                                    <Setter.Value>
+                                                        <DataTemplate>
+                                                            <Grid>
+                                                                <Grid.ContextMenu>
+                                                                    <ContextMenu>
+                                                                        <MenuItem Header="Öppna aktivitet" Command="{Binding OpenCommand}" />
+                                                                        <MenuItem Header="Kopiera kommentar" Command="{Binding CopyCommentCommand}" />
+                                                                    </ContextMenu>
+                                                                </Grid.ContextMenu>
+                                                                <Grid.InputBindings>
+                                                                    <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding OpenCommand}" />
+                                                                </Grid.InputBindings>
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="30" />
+                                                                    <ColumnDefinition Width="150" />
+                                                                    <ColumnDefinition Width="60" />
+                                                                    <ColumnDefinition />
+                                                                </Grid.ColumnDefinitions>
+                                                                
+                                                                <Image Visibility="{Binding Reported, Converter={StaticResource BoolToVis}}" Source="/Resources/Images/check.png" Width="18" HorizontalAlignment="Left" />
+                                                                <TextBlock Grid.Column="1" Text="{Binding Name}" />
+                                                                <TextBlock Grid.Column="2" Text="{Binding Hours}" />
+                                                                <TextBlock Grid.Column="3" Text="{Binding Comment}" TextWrapping="Wrap" />
+                                                            </Grid>
+                                                        </DataTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </ListBox.Style>
+                        </ListBox>
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,24 @@
+﻿{
+    "New": "New",
+    "New2": "New",
+    "Save": "Save",
+    "Open": "Open",
+    "Delete": "Delete",
+    "Edit": "Edit",
+    "GoBack": "Go back",
+    "Parent": "Parent",
+
+    "Name": "Name",
+    "TimeBudget": "Time budget",
+    "Deadline": "Deadline",
+
+    "Project": "Project",
+    "Activity": "Activity",
+    "Time": "Time",
+    "ReportTime": "Reported {Time}[tolower]",
+
+    "NewProject": "{New2} {Project}[tolower]",
+    "TimeReport": "Tidsreport",
+
+    "Comment": "Comment"
+}

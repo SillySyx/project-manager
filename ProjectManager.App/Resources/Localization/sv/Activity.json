@@ -1,0 +1,8 @@
+﻿{
+    "Used": "Förbrukat",
+    "Total": "Totalt",
+    "Date": "Datum",
+    "Hours": "Timmar",
+    "DeleteActivity":  "{Delete} {Activity}[tolower]",
+    "DeleteActivityText":  "Om du tar bort den här aktivieten så kommer alla registrerade tider för den att tas bort också.\r\n\r\nÄr du säker du vill ta bort aktiviteten?"
+}
